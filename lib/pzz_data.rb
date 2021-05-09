@@ -13,5 +13,9 @@ class PzzData
 
     @data = JSON.parse(body)['response']['data']
   end
+
+  def random_data
+    data[rand(data.count)]
+  end
 end
 

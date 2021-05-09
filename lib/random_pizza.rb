@@ -1,15 +1,30 @@
 # frozen_string_literal: true
 
-require_relative 'pzz_data'
+require_relative 'pizza'
+require_relative 'price'
+require_relative 'callories'
 
 class RandomPizza
-  attr_reader :pizzas
+  attr_reader :pizza, :price, :callories
 
-  def initialize
-    @pizzas = PzzData.new.data
-  end
+  TITLE = 'title'
+  DESCRIPTION = 'anonce'
+  BIG_PRICE = 'big_price'
+  MEDIUM_PRICE = 'medium_price'
+  THIN_PRICE = 'thin_price'
+  BIG_CALORIES = 'big_thin_calories'
+  MEDIUM_CALORIES = 'medium_thin_calories'
+  THIN_CALORIES = 'thin_thin_calories'
 
-  def random_pizza
-    pizzas[rand(pizzas.count)]
+  def initialize(random_data)
+    @pizza = Pizza.new(random_data[TITLE], random_data[DESCRIPTION])
+
+    @price = Price.new(random_data[BIG_PRICE],
+                       random_data[MEDIUM_PRICE],
+                       random_data[THIN_PRICE])
+
+    @callories = Callories.new(random_data[BIG_CALORIES],
+                               random_data[MEDIUM_CALORIES],
+                               random_data[THIN_CALORIES])
   end
 end
