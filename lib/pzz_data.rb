@@ -11,6 +11,7 @@ class PzzData
     response = Net::HTTP.get_response(URI.parse(source))
     body = response.body
 
-    @data = JSON.parse(body)
+    @data = JSON.parse(body)['response']['data']
   end
 end
+
