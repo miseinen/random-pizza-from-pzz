@@ -23,7 +23,7 @@ class RandomPizza
                        random_data[MEDIUM_PRICE],
                        random_data[THIN_PRICE])
 
-    @calories = Callories.new(random_data[BIG_CALORIES],
+    @calories = Calories.new(random_data[BIG_CALORIES],
                                random_data[MEDIUM_CALORIES],
                                random_data[THIN_CALORIES])
   end

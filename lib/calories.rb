@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Callories
+class Calories
   attr_reader :big, :standard, :thin
 
   def initialize(big, standard, thin)
