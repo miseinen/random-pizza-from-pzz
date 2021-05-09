@@ -2,10 +2,10 @@
 
 require_relative 'pizza'
 require_relative 'price'
-require_relative 'callories'
+require_relative 'calories'
 
 class RandomPizza
-  attr_reader :pizza, :price, :callories
+  attr_reader :pizza, :price, :calories
 
   TITLE = 'title'
   DESCRIPTION = 'anonce'
@@ -23,7 +23,7 @@ class RandomPizza
                        random_data[MEDIUM_PRICE],
                        random_data[THIN_PRICE])
 
-    @callories = Callories.new(random_data[BIG_CALORIES],
+    @calories = Callories.new(random_data[BIG_CALORIES],
                                random_data[MEDIUM_CALORIES],
                                random_data[THIN_CALORIES])
   end
