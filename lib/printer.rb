@@ -1,0 +1,49 @@
+# frozen_string_literal: true
+
+class Printer
+  attr_reader :random_pizza
+
+  PRICE = 10_000
+  DELIMITER = '=' * 40
+
+  def initialize(random_pizza)
+    @random_pizza = random_pizza
+  end
+
+  def print_pizza_details
+    puts DELIMITER
+    puts 'Ваша случайная пицца с Pzz.by: '
+    puts DELIMITER
+    puts "Наименование: #{random_pizza.pizza.title}"
+    puts "Состав: #{random_pizza.pizza.description}"
+    big_pizza_details
+    medium_pizza_details
+    thin_pizza_details
+  end
+
+  private
+
+  def big_pizza_details
+    return if random_pizza.price.big.zero?
+
+    puts 'Большая:'
+    print "Стоимость: #{random_pizza.price.big / PRICE} BYN "
+    puts "Каллории: #{random_pizza.callories.big}"
+  end
+
+  def medium_pizza_details
+    return if random_pizza.price.standard.zero?
+
+    puts 'Средняя:'
+    print "Стоимость: #{random_pizza.price.standard / PRICE} BYN "
+    puts "Каллории: #{random_pizza.callories.standard}"
+  end
+
+  def thin_pizza_details
+    return if random_pizza.price.thin.zero?
+
+    puts 'На тонком тесте:'
+    print "Стоимость: #{random_pizza.price.thin / PRICE} BYN "
+    puts "Каллории: #{random_pizza.callories.thin}"
+  end
+end
