@@ -4,7 +4,7 @@ class Printer
   attr_reader :random_pizza
 
   PRICE = 10_000
-  DELIMITER = '=' * 40
+  DELIMITER = '=' * 50
 
   def initialize(random_pizza)
     @random_pizza = random_pizza
@@ -19,6 +19,9 @@ class Printer
     big_pizza_details
     medium_pizza_details
     thin_pizza_details
+    puts DELIMITER
+    puts 'Переходите на сайт Pzz.by и заказывайте выбранную пиццу :)'
+    puts DELIMITER
   end
 
   private
