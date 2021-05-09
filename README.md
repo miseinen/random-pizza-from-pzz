@@ -9,3 +9,5 @@ Sometimes there is a desire to buy a random pizza. This simple console applicati
 - Open a terminal and navigate to the folder containing the cloned repo
 - Print '**ruby app.rb**' to terminal
 - Enjoy🎉
+
+**PS**. It's not an advertising. I just like ✨[Pzz.by](https://pzz.by/)✨
