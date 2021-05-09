@@ -31,7 +31,7 @@ class Printer
 
     puts 'Большая:'
     print "Стоимость: #{random_pizza.price.big / PRICE} BYN "
-    puts "Каллории: #{random_pizza.calories.big}"
+    puts "Калории: #{random_pizza.calories.big}"
   end
 
   def medium_pizza_details
@@ -39,7 +39,7 @@ class Printer
 
     puts 'Средняя:'
     print "Стоимость: #{random_pizza.price.standard / PRICE} BYN "
-    puts "Каллории: #{random_pizza.calories.standard}"
+    puts "Калории: #{random_pizza.calories.standard}"
   end
 
   def thin_pizza_details
@@ -47,6 +47,6 @@ class Printer
 
     puts 'На тонком тесте:'
     print "Стоимость: #{random_pizza.price.thin / PRICE} BYN "
-    puts "Каллории: #{random_pizza.calories.thin}"
+    puts "Калории: #{random_pizza.calories.thin}"
   end
 end
